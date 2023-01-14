@@ -1,0 +1,39 @@
+#ex1
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+c = int(input("Введите третье число: "))
+d = input("Введите + или *: ")
+if d == "+":
+   print(a + b + c)
+elif d == "*":
+   print(a * b * c)
+else:
+   print("eror")
+
+#ex2
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+c = int(input("Введите третье число: "))
+x = input("Введите max, min или avrg: ")
+
+if x == "max":
+   print(max(a, b, c))
+elif x == "min":
+   print(min(a, b, c))
+elif x == "avg":
+   print((a + b + c) / 3)
+else:
+    print("eror")
+
+#ex3
+a = int(input("Введите число: "))
+b = input("Введите мили, дюймы или ярды: ")
+
+if b == "мили":
+   print(a * 0.000621371192)
+elif b == "дюймы":
+   print(a * 3.2808399)
+elif b == "ярды":
+   print(a * 1.0936133)
+else:
+    print("eror")
