@@ -1,0 +1,21 @@
+#homework 18.01
+A = [1,2]
+j = 1
+while j <= 5:
+    A.append( (j+1) * A[j] + A[j-1])
+    j+=1
+print(A)
+
+A = [1,3]
+j = 1
+while j <= 5::
+  A.append(A(j)  * 3A[j] - A[j-1)]
+  j+=1
+print(A)
+
+A = [3,1]
+j = 1
+while j <= 5::
+  A.append(A(j)  * 2A[j] - A[j+1])  
+  j+=1
+print(A)
