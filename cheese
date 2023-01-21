@@ -1,0 +1,12 @@
+#cheese
+print(int(input("Введите координату: ")))
+print(ord("C"))
+print(ord("D"))
+
+if (ord("C") - ord("D")) + (7-5) == 3:
+    print("YES")
+elif (ord("E") - ord("E") + (2-4)):
+    print("NO")
+else:
+    print("eror")
+    
