@@ -1,0 +1,39 @@
+# ex1
+print('Введите 1 число:')
+x = int(input())
+print('Введите 2 число:')
+y = int(input())
+print(x**y)
+
+#ex2
+x = 0
+for i in range(100, 999):
+a, b, c = str(i)
+if a==b or a==c or b==c:
+ x += 1
+print(x)
+
+#ex3
+c = 0
+
+for i in range(100, 999): #диапозон чисел
+ s = f'{i}' # f-форматирование
+ if len(set(s)) == len(s): #используем множество - set
+  c += 1 #+1
+
+print(c)
+
+#ex5
+n = int( input('введите число: ') )
+
+a = 0
+i = 0
+
+#цикл, который работает пока n > 0
+while n > 0:
+    num = n % 10
+    if num != 3 and num != 6:    # Если num не равно 3 и не равно 6, то эта цифра  подходит
+        a = a + num * 10**i
+        i = i + 1   # Увеличиваю на 1 значение в i
+    n = n // 10   # Отбрасываю последнюю цифру от n
+print(a)
