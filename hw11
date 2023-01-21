@@ -1,0 +1,54 @@
+#ex1
+a = int(input("Введите 1 число: "))
+b = int(input("Введите 2 число: "))
+
+summnch = 0
+summch = 0
+summ9 = 0
+
+for i in range(a,b+1):
+    if i % 2 !=0: #здесь мы находим нечетные числа если число не кратно 2 то не оно нечетное
+        summnch +=i
+        print("Сумма нечетных: ", summnch)
+
+    if i % 2 == 0: #здесь мы находим нечетные числа если число кратно 2 то  оно четное
+        summch+=i
+        print("Сумма четных: ", summch)
+
+    if i % 9 == 0: #здесь мы проверяем на кратность 9
+        summ9 += i #здесь мы находим сумму всех чисел кратных на 9
+        print("Сумма кратных на 9: ", summ9)
+
+#ex2
+length = int(input("Введите размер длины: "))
+symbol = input("Введите предпочатаемый символ для заполнения:  ")
+for i in range(length):
+    print(symbol)
+
+#ex3
+while True: #while True выполняется  код бесконечно
+
+    number = int(input("Введите число: "))
+
+    if number > 0:
+        print('Number is positive')
+    elif number < 0:
+        print('Number is negative')
+    else:
+        print('Number is equal to zero')
+    if number == 7:
+        print('Good bye!')
+
+#ex4
+a = [] #cписок введеных пользователем чисел
+while True:
+   number = int(input("Введите числа: "))
+   a.append(number) #append() в Python добавляет элемент в конец
+
+   if number == 7:
+       print('Сумма введённых чисел:', sum(a))
+       print('Максимальное число:', max(a))
+       print('Минимальное число:', min(a))
+   elif  number == 7: #ecли число = 7, то программа пишет гуд бай
+       print("Good bay")
+
