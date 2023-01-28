@@ -1,12 +1,15 @@
 #cheese
-print(int(input("Введите координату: ")))
-print(ord("C"))
-print(ord("D"))
 
-if (ord("C") - ord("D")) + (7-5) == 3:
-    print("YES")
-elif (ord("E") - ord("E") + (2-4)):
-    print("NO")
+step = input() # шаг, напр A1-H7
+if step[2] != '-': # проверка на ошибку(отстутствие -)
+    print("error")
+if len(step) != 5:  # проверка на ошибку
+    print("error")
+if ord(step[3]) not in range(65, 74) or step[0] not in range(65, 74):
+    print("Error")
+if step[1] not in range(1,9) or step[4] not in range(1,9):
+    print("Error")
+if abs((ord(step[3]) - ord(step[0]))) + abs((int(step[1]) - (int(step[4])))) == 3: #Проверка правильности кода
+    print("Yes")
 else:
-    print("eror")
-    
+    print("NO")
