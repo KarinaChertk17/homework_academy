@@ -1,0 +1,45 @@
+import random
+# создаём  списки
+st_1 = []
+st_2 = []
+st_all = []
+st_all_bez = []
+st_all_ob = []
+st_all_unik = []
+st_minmax = []
+# задаём длину списков c помощью библиотеки рандом
+lenght = random.randint(10, 20)
+# создаём 2 начальных списка
+
+#append() Python добавляет элемент в конец списка
+for i in range(lenght):
+    elem1 = random.randint(-50, 50)
+    st_1.append(elem1)
+    elem2 = random.randint(-50, 50)
+    st_2.append(elem2)
+    if elem1 == elem2:
+        # добовляем в список все одинаковые числа
+        st_all_ob.append(elem1, elem2)
+        # добавляем в список все одинаковые числа, без повторений
+        st_all_bez.append(elem1)
+    if elem1 != elem2:
+        st_all_unik.append(elem1)
+    if elem2 != elem1:
+        st_all_unik.append(elem2)
+
+# создаём общий список
+st_all.append(st_1)
+st_all.append(st_2)
+# создаём список общих элементов
+st_minmax.append(min(st_1))
+st_minmax.append(min(st_2))
+st_minmax.append(max(st_1))
+st_minmax.append(max(st_2))
+
+print("Первый список", st_1)
+print("Первый список", st_2)
+print("Общий список", st_all)
+print("Список уникальных чисел", st_all_unik)
+print("Список с общими чисел", st_all_ob)
+print("Списоодинаковых чисел без повторения", st_all_bez)
+print("Мин и макс значения списков", st_minmax)
