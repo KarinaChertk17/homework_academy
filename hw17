@@ -1,0 +1,22 @@
+#библиотеку рандом подключаем
+from random import randint
+
+x1, x2 = 10, 5
+
+a = [randint(1, 10) for i in range(x1)] #значение + цикл + рандиант(значения из библиотеки)
+print(*a) #вывод 1 списка
+b = [randint(1, 10) for i in range(x2)]
+print(*b)#вывод 2 списка
+
+c = a + b
+
+#выводим значения
+print('1 ', *c)
+c = list(set(a + b)) #set - это множество
+print('2 ', *c)
+c = list(set(a) & set(b))
+print('3 ', *c)
+c = list(set(a) | set(b))
+print('4 ', *c)
+c = [min(a), max(a), min(b), max(b) #выводятся макс и миним значения
+print('5 ', *c)
